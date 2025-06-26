@@ -305,117 +305,117 @@ speller:
     # 张居正方案（替换原方案小鹤双拼适配）
     
       # 需要特殊处理避免歧义的韵母
-    - derive/([bcdfghklmnprstwyz])(ang)/$1h
-    - derive/(ch)(ang)/ih
-    - derive/(sh)(ang)/uh
-    - derive/(zh)(ang)/vh
+    - derive/^([bcdfghklmnprstwyz])(ang)$/$1h
+    - derive/^(ch)(ang)$/ih
+    - derive/^(sh)(ang)$/uh
+    - derive/^(zh)(ang)$/vh
 
-    - derive/([cdghklnrstyz])(ong)/$1s
-    - derive/(ch)(ong)/is
-    - derive/(zh)(ong)/vs
+    - derive/^([cdghklnrstyz])(ong)$/$1s
+    - derive/^(ch)(ong)$/is
+    - derive/^(zh)(ong)$/vs
 
-    - derive/([bcdghklmnpstwz])(ai)/$1d
-    - derive/(ch)(ai)/id
-    - derive/(sh)(ai)/ud
-    - derive/(zh)(ai)/vd
+    - derive/^([bcdghklmnpstwz])(ai)$/$1d
+    - derive/^(ch)(ai)$/id
+    - derive/^(sh)(ai)$/ud
+    - derive/^(zh)(ai)$/vd
 
-    - derive/([bcdghklmnprstyz])(ao)/$1c
-    - derive/(ch)(ao)/ic
-    - derive/(sh)(ao)/uc
-    - derive/(zh)(ao)/vc
+    - derive/^([bcdghklmnprstyz])(ao)$/$1c
+    - derive/^(ch)(ao)$/ic
+    - derive/^(sh)(ao)$/uc
+    - derive/^(zh)(ao)$/vc
 
-    - derive/([bcdfghklmnprstwyz])(an)/$1j
-    - derive/(ch)(an)/ij
-    - derive/(sh)(an)/uj
-    - derive/(zh)(an)/vj
+    - derive/^([bcdfghklmnprstwyz])(an)$/$1j
+    - derive/^(ch)(an)$/ij
+    - derive/^(sh)(an)$/uj
+    - derive/^(zh)(an)$/vj
 
       # 单字母韵母
-    - derive/a/aa
-    - derive/o/oo
-    - derive/e/ee
+    - derive/^(a)$/aa
+    - derive/^(o)$/oo
+    - derive/^(e)$/ee
 
       # 三字母韵母
-    - derive/ang/ah
-    - derive/eng/eg
+    - derive/^(ang)$/ah
+    - derive/^(eng)$/eg
 
       # 卷舌声母
-    - derive/zh([aeiu])/v$1
-    - derive/ch([aeiu])/i$1
-    - derive/sh([aeiu])/u$1
+    - derive/^(zh)([aeiu])$/v$2
+    - derive/^(ch)([aeiu])$/i$2
+    - derive/^(sh)([aeiu])$/u$2
 
       # 四字母韵母
-    - derive/([jlnqx])(iang)/$1l
-    - derive/([jqx])(iong)/$1s
+    - derive/^([jlnqx])(iang)$/$1l
+    - derive/^([jqx])(iong)$/$1s
 
       # 三字母韵母
-    - derive/([bdjlmnpqtxy])(ing)/$1k
-    - derive/([bdjlmnpqtx])(iao)/$1n
-    - derive/([bdjlmnpqtx])(ian)/$1m
+    - derive/^([bdjlmnpqtxy])(ing)$/$1k
+    - derive/^([bdjlmnpqtx])(iao)$/$1n
+    - derive/^([bdjlmnpqtx])(ian)$/$1m
 
       # 二字母韵母
-    - derive/([djlmnqx])(iu)/$1q
-    - derive/([jlnqxy])[uv]e/$1t
-    - derive/([bdjlmnpqtx])(ie)/$1p
-    - derive/([djlqx])(ia)/$1x
-    - derive/([bjlmnpqxy])(in)/$1b
+    - derive/^([djlmnqx])(iu)$/$1q
+    - derive/^([jlnqxy])[uv]e/$1t
+    - derive/^([bdjlmnpqtx])(ie)$/$1p
+    - derive/^([djlqx])(ia)$/$1x
+    - derive/^([bjlmnpqxy])(in)$/$1b
 
       # iuv特殊处理
       # 四字母
-    - derive/([ghk])(uang)/$1l
-    - derive/(ch)(uang)/il
-    - derive/(sh)(uang)/ul
-    - derive/(zh)(uang)/vl
+    - derive/^([ghk])(uang)$/$1l
+    - derive/^(ch)(uang)$/il
+    - derive/^(sh)(uang)$/ul
+    - derive/^(zh)(uang)$/vl
 
       # 三字母
-    - derive/([cdghjklnqrstxyz])(uan)/$1r
-    - derive/(ch)(uan)/ir
-    - derive/(sh)(uan)/ur
-    - derive/(zh)(uan)/vr
+    - derive/^([cdghjklnqrstxyz])(uan)$/$1r
+    - derive/^(ch)(uan)$/ir
+    - derive/^(sh)(uan)$/ur
+    - derive/^(zh)(uan)$/vr
 
-    - derive/([bcdfghklmnprstwz])(eng)/$1g
-    - derive/(ch)(eng)/ig
-    - derive/(sh)(eng)/ug
-    - derive/(zh)(eng)/vg
+    - derive/^([bcdfghklmnprstwz])(eng)$/$1g
+    - derive/^(ch)(eng)$/ig
+    - derive/^(sh)(eng)$/ug
+    - derive/^(zh)(eng)$/vg
 
-    - derive/([ghk])(uai)/$1k
-    - derive/(ch)(uai)/ik
-    - derive/(sh)(uai)/uk
-    - derive/(zh)(uai)/vk
+    - derive/^([ghk])(uai)$/$1k
+    - derive/^(ch)(uai)$/ik
+    - derive/^(sh)(uai)$/uk
+    - derive/^(zh)(uai)$/vk
 
       # 二字母
-    - derive/([bdfghklmnpwz])(ei)/$1w
-    - derive/(sh)(ei)/uh
-    - derive/(zh)(ei)/vh
+    - derive/^([bdfghklmnpwz])(ei)$/$1w
+    - derive/^(sh)(ei)$/uw
+    - derive/^(zh)(ei)$/vw
 
-    - derive/([cdghjklqrstxyz])(un)/$1y
-    - derive/(ch)(un)/iy
-    - derive/(sh)(un)/uy
-    - derive/(zh)(un)/vy
+    - derive/^([cdghjklqrstxyz])(un)$/$1y
+    - derive/^(ch)(un)$/iy
+    - derive/^(sh)(un)$/uy
+    - derive/^(zh)(un)$/vy
 
-    - derive/([cdghklnrstz])(uo)/$1o
-    - derive/(ch)(uo)/io
-    - derive/(sh)(uo)/uo
-    - derive/(zh)(uo)/vo
+    - derive/^([cdghklnrstz])(uo)$/$1o
+    - derive/^(ch)(uo)$/io
+    - derive/^(sh)(uo)$/uo
+    - derive/^(zh)(uo)$/vo
 
-    - derive/([bcdfghkmnprswz])(en)/$1f
-    - derive/(ch)(en)/if
-    - derive/(sh)(en)/uf
-    - derive/(zh)(en)/vf
+    - derive/^([bcdfghkmnprswz])(en)$/$1f
+    - derive/^(ch)(en)$/if
+    - derive/^(sh)(en)$/uf
+    - derive/^(zh)(en)$/vf
 
-    - derive/([cdfghklmnprstyz])(ou)/$1z
-    - derive/(ch)(ou)/iz
-    - derive/(sh)(ou)/uz
-    - derive/(zh)(ou)/vz
+    - derive/^([cdfghklmnprstyz])(ou)$/$1z
+    - derive/^(ch)(ou)$/iz
+    - derive/^(sh)(ou)$/uz
+    - derive/^(zh)(ou)$/vz
 
-    - derive/([ghkr])(ua)/$1x
-    - derive/(ch)(ua)/ix
-    - derive/(sh)(ua)/ux
-    - derive/(zh)(ua)/vx
+    - derive/^([ghkr])(ua)$/$1x
+    - derive/^(ch)(ua)$/ix
+    - derive/^(sh)(ua)$/ux
+    - derive/^(zh)(ua)$/vx
 
-    - derive/([cdghkrstz])(ui)/$1v
-    - derive/(ch)(ui)/iv
-    - derive/(sh)(ui)/uv
-    - derive/(zh)(ui)/vv
+    - derive/^([cdghkrstz])(ui)$/$1v
+    - derive/^(ch)(ui)$/iv
+    - derive/^(sh)(ui)$/uv
+    - derive/^(zh)(ui)$/vv
 
 wubi98_mint:
   tag: wubi98_mint
@@ -486,45 +486,14 @@ recognizer:
     gregorian_to_lunar: "^N[0-9]{1,8}"  # 响应 lua_translator@Chinese_lunar_calendar 公历转农历，输入 N20240115 得到「二〇二四年腊月初五」，脚本将自动获取第 2 个字符作为触发前缀
     uppercase: ""  # 覆写默认的 uppercase 使其可以在输入大写后，输入数字
 
+
 key_binder:
   import_preset: default
   bindings:
-    - {accept: "Control+Shift+E", toggle: emoji_suggestion, when: always}
-    - {accept: "Control+Shift+exclam", toggle: transcription, when: has_menu}
-    - {accept: "Control+Shift+1", toggle: transcription, when: has_menu}
-    - {accept: minus, send: Page_Up, when: paging}     # 使用`-`进行向上翻页（第一页时候无效）
-    - {accept: equal, send: Page_Down, when: has_menu} # 使用`=`进行向下翻页
-    # Emacs 风格的快捷键
-    - { when: composing, accept: Control+p, send: Up }     # composing 时,Control+p 等同于 Up 键
-    - { when: composing, accept: Control+n, send: Down }
-    - { when: composing, accept: Control+b, send: Left }
-    - { when: composing, accept: Control+f, send: Right }
-    - { when: composing, accept: Control+a, send: Home }
-    - { when: composing, accept: Control+e, send: End }
-    - { when: composing, accept: Control+d, send: Delete }
-    - { when: composing, accept: Control+k, send: Shift+Delete } # 删除到行尾
-    - { when: composing, accept: Control+g, send: Escape }       # 退出编码
-    - { when: composing, accept: Alt+v, send: Page_Up }          # 翻页
-    - { when: composing, accept: Control+v, send: Page_Down }
-    # 按词移动光标
-    - { when: composing, accept: ISO_Left_Tab, send: Shift+Left } # ISO_Left_Tab 是 Shift+Tab
-    - { when: composing, accept: Shift+Tab, send: Shift+Left }
-    - { when: composing, accept: Tab, send: Shift+Right }
-    # 翻页
-    - { when: paging, accept: minus, send: Page_Up }             # 编码窗口翻页
-    - { when: has_menu, accept: equal, send: Page_Down }
-    - { when: paging, accept: comma, send: Page_Up }             # 候选窗口翻页
-    - { when: has_menu, accept: period, send: Page_Down }
-    - { when: predicting, accept: comma, send: comma }           # 在预编码模式下,不当作快捷键
-    - { when: predicting, accept: period, send: period }
-    # 切换状态
-    - { when: always, accept: Control+Shift+1, select: .next }   # 切换输入方案
-    - { when: always, accept: Control+Shift+2, toggle: ascii_mode } # 切换中/西文模式
-    - { when: always, accept: Control+Shift+3, toggle: full_shape } # 切换全角/半角
-    - { when: always, accept: Control+Shift+4, toggle: transcription } # 切换简体/繁体
-    - { when: always, accept: Control+Shift+5, toggle: extended_charset } # 切换扩展字符
-    - { when: always, accept: Shift+space, toggle: full_shape } # 另一种切换全角/半角的方式
-    - { when: always, accept: Control+period, toggle: ascii_punct } # 切换中/西文标点
+    - {accept: "Control+Shift+E", toggle: emoji_suggestion, when: always}   # Emoji 快捷键
+    - {accept: "Control+Shift+1", toggle: transcription, when: has_menu}    # 当存在候选菜单时，可以切换简体和繁体
+
+
 menu:
   # 候选词个数
   page_size: 6
