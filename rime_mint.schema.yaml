@@ -182,10 +182,9 @@ speller:
   # 拼写匹配
   algebra:
     - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/  # 万象词库 Start
-    - xform/ń|ň|ǹ/en/ 
-    - xform/\bn\b/en/   #解决𧗈字拼音n通过双拼en打出来
-    - xform/\bng\b/eng/
-    - xform/ńg|ňg|ǹg/eng/                                        # 万象词库 End
+    - xform/^ng$/eng/
+    - xform/ńg|ňg|ǹg/eng/
+    - xform/ń|ň|ǹ/en/                                            # 万象词库 End
     - erase/^xx$/ # 首选保留
     # - derive/^([zcs])h/$1/ # zh, ch, sh => z, c, s
     # - derive/^([zcs])([^h])/$1h$2/ # z, c, s => zh, ch, sh
@@ -353,7 +352,8 @@ key_binder:
   import_preset: default
   bindings:
     - {accept: "Control+Shift+E", toggle: emoji_suggestion, when: always}   # Emoji 快捷键
-    - {accept: "Control+Shift+1", toggle: transcription, when: has_menu}    # 当存在候选菜单时，可以切换简体和繁体
+    - {accept: "Control+Shift+1", toggle: transcription, when: has_menu}           # 当存在候选菜单时，可以切换简体和繁体
+    - {accept: "Control+Shift+exclam", toggle: transcription, when: has_menu}      # 当存在候选菜单时，可以切换简体和繁体（小狼毫可能读取这个）
 
 
   # 候选词个数
